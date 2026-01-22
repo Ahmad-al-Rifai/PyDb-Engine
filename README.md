@@ -26,7 +26,7 @@ The engine utilizes a classic tiered architecture to separate parsing logic from
 ```mermaid
 graph TD
     User[User Input / CLI] -->|SQL String| Lexer[Lexer]
-    Lexer -->|Tokens| Parser[Parser & Planner]
+    Lexer -->|Tokens| Parser["Parser & Planner"]
     Parser -->|Query Plan| Executor[Executor]
-    Executor -->|Seek/Scan| BTree[B-Tree Index]
-    BTree -->|Read/Write| Storage[Tuple Storage (__slots__)]
+    Executor -->|Seek/Scan| BTree["B-Tree Index"]
+    BTree -->|Read/Write| Storage["Tuple Storage (__slots__)"]
